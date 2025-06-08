@@ -6,9 +6,36 @@
   <title>TrackNutri</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body class="container py-3">
   <h1 class="mb-4">TrackNutri</h1>
+
+  <div class="card p-3 mb-4">
+    <h2 class="h4">Objectifs quotidiens</h2>
+    <form id="goalsForm" class="row g-3 align-items-end">
+      <div class="col-md-2">
+        <label for="gcalories" class="form-label">Calories</label>
+        <input type="number" class="form-control" id="gcalories" required>
+      </div>
+      <div class="col-md-2">
+        <label for="gprotein" class="form-label">Protéines (g)</label>
+        <input type="number" class="form-control" id="gprotein" required>
+      </div>
+      <div class="col-md-2">
+        <label for="gcarbs" class="form-label">Glucides (g)</label>
+        <input type="number" class="form-control" id="gcarbs" required>
+      </div>
+      <div class="col-md-2">
+        <label for="gfat" class="form-label">Lipides (g)</label>
+        <input type="number" class="form-control" id="gfat" required>
+      </div>
+      <div class="col-md-2 d-grid">
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+      </div>
+    </form>
+    <canvas id="progressChart" class="mt-3"></canvas>
+  </div>
 
   <form id="entryForm" class="row g-3">
     <div class="col-md-3">
@@ -34,6 +61,7 @@
   <table class="table table-striped mt-4" id="entriesTable">
     <thead>
       <tr>
+        <th>Date</th>
         <th>Aliment</th>
         <th>Calories</th>
         <th>Protéines</th>
