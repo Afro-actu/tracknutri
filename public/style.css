@@ -1,0 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
